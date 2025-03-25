@@ -1,0 +1,68 @@
+/* Contenedor General de Cards */
+.cards-container, #product-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+  }
+  
+  /* Estilo General de las Cards */
+  .card {
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: #74c062; /* Default */
+    margin: 15px 15px;
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    align-items: center; /* Alinea el contenido horizontalmente */
+    gap: 10px; /* Espacio entre elementos */
+    padding: 10px; /* Espaciado interno */
+  }
+  
+  /* Hover en la Card */
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Imágenes dentro de las Cards */
+  .card-image {
+    width: 100%;
+    height: 200px; /* Establece una altura consistente */
+    object-fit: contain; /* Recorta la imagen para llenar el espacio sin deformarla */
+  }
+  
+  
+  /* Encabezados dentro de las Cards */
+  .card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  /* Texto descriptivo en las Cards */
+  .card p {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 10px;
+    margin-bottom: auto; /* Deja espacio entre el texto y el botón */
+  }
+  
+  /* Botón Ver Más */
+  .view-more-btn {
+    padding: 10px 20px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center; /* Centra el botón en la card */
+  }
+  
+  .view-more-btn:hover {
+    background-color: #0056b3;
+  }
+  

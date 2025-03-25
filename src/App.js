@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Carousel from './components/Carousel';
 import MainSection from './components/mainSection';
 import Footer from './components/Footer';
+import Inicio from './components/Inicio';
 import Servicios from './components/Servicios';
 import QuienesSomos from './components/QuienSomos';
 import Ayuda from './components/Ayuda';
@@ -20,6 +21,7 @@ const App = () => {
             <MainSection />
           </>
         } />
+        <Route path="/" element={<Inicio />} />
         <Route path="/Servicios" element={<Servicios />} />
         <Route path="/QuienSomos" element={<QuienesSomos />} />
         <Route path="/Ayuda" element={<Ayuda />} />
