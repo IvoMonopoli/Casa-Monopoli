@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -12,9 +12,10 @@ import img3 from '../assets/oximetro.png';
 const Carousel = () => {
   return (
     <Swiper
-      modules={[Navigation, Pagination]}
+      modules={[Navigation, Pagination, Autoplay]} // Incluye Autoplay aquí
       navigation
       pagination={{ clickable: true }}
+      autoplay={{ delay: 3000, disableOnInteraction: false }} // Configura Autoplay
       className="swiper-container"
     >
       <SwiperSlide><img src={img1} alt="Foto 1" /></SwiperSlide>

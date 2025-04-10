@@ -1,4 +1,5 @@
-import '../styles/Cards.css'
+import { Link } from 'react-router-dom';
+import '../styles/Cards.css';
 
 const Cards = () => {
     const services = [
@@ -6,49 +7,49 @@ const Cards = () => {
         id: 1,
         title: "Aspirador",
         description: "Breve descripción del servicio 1.",
-        image: "/assets/cards/aspirador.jpg",
+        image: require("../assets/cards/aspirador.jpg"),
       },
       {
         id: 2,
         title: "Concentrador de bajo flujo",
         description: "Breve descripción del servicio 2.",
-        image: "/assets/cards/concentrador.png",
+        image: require("../assets/cards/concentrador.png"),
       },
       {
         id: 3,
         title: "Concentrador de alto flujo",
         description: "Breve descripción del servicio 3.",
-        image: "/assets/cards/concentradoraf.png",
+        image: require("../assets/cards/concentradoraf.png"),
       },
       {
-        id: 3,
-        title: "Mochila de oxigeno",
-        description: "Breve descripción del servicio 3.",
-        image: "/assets/cards/mochila.jpg",
+        id: 4,
+        title: "Mochila de oxígeno",
+        description: "Breve descripción del servicio 4.",
+        image: require("../assets/cards/mochila.jpg"),
       },
       {
-        id: 3,
+        id: 5,
         title: "Nebulizador",
-        description: "Breve descripción del servicio 3.",
-        image: "/assets/cards/nebulizador.png",
+        description: "Breve descripción del servicio 5.",
+        image: require("../assets/cards/nebulizador.png"),
       },
       {
-        id: 3,
+        id: 6,
         title: "Tubo grande hospitalario",
-        description: "Breve descripción del servicio 3.",
-        image: "/assets/cards/tubogrande.png",
+        description: "Breve descripción del servicio 6.",
+        image: require("../assets/cards/tubogrande.png"),
       },
       {
-        id: 3,
-        title: "Mascara de oxigeno",
-        description: "Breve descripción del servicio 3.",
-        image: "/assets/cards/mascara.png",
+        id: 7,
+        title: "Máscara de oxígeno",
+        description: "Breve descripción del servicio 7.",
+        image: require("../assets/cards/mascara.png"),
       },
       {
-        id: 3,
-        title: "Bigotera de oxigeno",
-        description: "Breve descripción del servicio 3.",
-        image: "/assets/cards/bigotera.png",
+        id: 8,
+        title: "Bigotera de oxígeno",
+        description: "Breve descripción del servicio 8.",
+        image: require("../assets/cards/bigotera.png"),
       },
     ];
   
@@ -59,7 +60,9 @@ const Cards = () => {
             <img src={service.image} alt={service.title} className="card-image" />
             <h3>{service.title}</h3>
             <p>{service.description}</p>
-            <button className="view-more-btn">Ver más</button>
+            <Link to={`/producto/${service.id}`}>
+              <button className="view-more-btn">Ver más</button>
+            </Link>
           </div>
         ))}
       </div>
@@ -67,4 +70,3 @@ const Cards = () => {
   };
   
   export default Cards;
-  
