@@ -1,0 +1,60 @@
+.ayuda {
+    max-width: 800px; /* Aumentamos el ancho */
+    margin: auto; /* Centramos horizontalmente */
+    text-align: center; /* Centramos el contenido */
+    padding: 40px; /* Espaciado para mejor visualización */
+}
+
+.ayuda h2 {
+    font-size: 3rem; /* Agrandamos el título */
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: green;
+    font-family: "Homer Simpson UI"
+}
+
+.ayuda-item {
+    border-bottom: 2px solid green; /* Línea más visible entre secciones */
+    padding: 15px;
+    font-family: "Homer Simpson UI"
+
+}
+
+.ayuda-titulo {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 2.5rem; /* Agrandamos los títulos */
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+    font-family: "Homer Simpson UI"
+}
+
+.ayuda-titulo:hover {
+    color: green;
+}
+
+.ayuda-preguntas {
+    text-align: center;
+    padding: 10px;
+    font-family: "Homer Simpson UI"
+}
+
+.ayuda-pregunta {
+    margin: 15px 0px;
+    font-size: 2rem; /* Agrandamos las preguntas */
+    color: green;
+    font-weight: bold;
+    font-family: "Homer Simpson UI"
+}
+
+.ayuda-pregunta p {
+    font-size: 1.3rem; /* Agrandamos las respuestas */
+    color: black;
+    font-family: "Homer Simpson UI";
+    margin-bottom: 50px;
+}
