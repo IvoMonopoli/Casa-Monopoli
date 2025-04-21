@@ -1,34 +1,33 @@
 .detalle-producto {
-    display: flex;
-    flex-direction: column; /* Coloca el título arriba */
-    align-items: center; /* Centra el contenido */
-    margin: 20px;
-    padding: 20px;
-    background-color: transparent;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    width: 100%;
-  }
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en una columna */
+  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  margin: 0 auto; /* Centra horizontalmente */
+  padding: 20px;
+  background-color: transparent;
+  max-width: 1200px;
+  width: 100%;
+  height: 80vh; /* Ocupa toda la altura de la ventana */
+}
+
   
   .detalle-contenedor {
-    display: flex; /* Organiza foto y descripción en fila */
-    justify-content: space-between; /* Espaciado entre los casilleros */
-    align-items: center; /* Centra verticalmente */
-    width: 100%;
-  }
+    display: flex; /* Mantiene la disposición en fila */
+    justify-content: space-between; /* Asegura espacio entre los elementos */
+    align-items: center; /* Alinea verticalmente en el centro */
+    width: 100%; /* Mantén el ancho completo */
+}
   
-  /* Casillero de la imagen */
-  .detalle-imagen-caja {
-    flex: 1; /* Ocupa la mitad del ancho */
-    display: flex;
-    justify-content: center; /* Centra la imagen horizontalmente */
-    align-items: center; /* Centra la imagen verticalmente */
-    margin-right: 10px; /* Reducimos el margen para acercar la línea a la derecha */
-    padding-right: 10px; /* Mueve la línea ligeramente hacia la derecha */
-    border-right: 3px solid green; /* Línea divisoria delgada */
-  }
-  
+.detalle-imagen-caja {
+  flex: 1; /* Ocupa la mitad del ancho */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin-right: 20px; /* Espaciado con la descripción */
+  padding-right: 80px;
+  border-right: 3px solid green; 
+}
   
   .detalle-imagen {
     width: 450px; /* Ancho fijo para todas las imágenes */
@@ -39,20 +38,19 @@
   }
   
   
-  /* Casillero de la descripción */
   .detalle-descripcion-caja {
     flex: 1; /* Ocupa la otra mitad del ancho */
     display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
     padding: 20px;
-    margin-left: 20px; /* Espaciado entre la línea y la descripción */
-    background-color: transparent; /* Fondo transparente */
-  }
+    margin-left: 20px; /* Espaciado con la imagen */
+    text-align: center; /* Alinea el texto al centro dentro de su caja */
+}
   
   .detalle-descripcion {
     font-size: 1.2rem;
     line-height: 1.5;
-    color: #555;
+    color: black;
   }
   

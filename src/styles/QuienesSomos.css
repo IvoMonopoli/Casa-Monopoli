@@ -1,0 +1,32 @@
+.quienes-somos {
+    display: flex;
+    flex-direction: column; /* Organiza las fotos arriba y la descripción abajo */
+    align-items: center; /* Centra horizontalmente */
+    padding: 20px;
+}
+
+.fotos-contenedor {
+    display: flex; /* Coloca las fotos en fila */
+    justify-content: space-around; /* Distribuye las fotos uniformemente */
+    align-items: center;
+    gap: 20px; /* Espaciado entre las fotos */
+    margin-bottom: 20px; /* Espaciado con la descripción */
+    margin-top: 50px;
+}
+
+.foto {
+    width: 350px; /* Ancho fijo para las fotos */
+    height: 250px; /* Alto fijo para las fotos */
+    object-fit: cover; /* Mantiene proporciones de las fotos */
+    border-radius: 10px; /* Esquinas redondeadas opcionales */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: sombra elegante */
+}
+
+.descripcion {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color:black;
+    text-align: center; /* Centra el texto */
+    max-width: 800px; /* Limita el ancho para una mejor lectura */
+    margin-top: 100px;
+}
