@@ -1,0 +1,63 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+/* Footer */
+.footer {
+  background-color: #74c062;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Iconos sociales */
+.iconos {
+  color: white;
+  font-size: 40px;
+  padding: 20px 0 5px;
+}
+.iconos i { padding: 0 9px; }
+.iconos .fa-instagram:hover { color: #E4405F; transform: scale(1.2); }
+.iconos .fa-whatsapp:hover  { color: #25D366; transform: scale(1.2); }
+.iconos .fa-square-facebook:hover { color: #4267B2; transform: scale(1.2); }
+
+/* Teléfono */
+.telefono a {
+  padding: 0 15px 0 0;
+  pointer-events: none;
+  font-size: 20px;
+}
+.telefono i { font-size: 20px; padding: 0 5px; }
+
+/* Contenido genérico */
+.contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+/* ==== Forzar iconos y enlaces blancos en el footer ==== */
+.footer,
+.footer a,
+.footer a:link,
+.footer a:visited,
+.iconos,
+.iconos i,
+.telefono a {
+  color: white !important;    /* blanco siempre */
+}
+
+/* evita subrayados en los enlaces */
+.footer a {
+  text-decoration: none !important;
+}
+
+/* Hover sólo en los enlaces (si quieres) */
+.footer a:hover {
+  color: #ddd !important;     /* un gris clarito al pasar el mouse */
+}
+
+/* En los iconos sociales, conserva tu hover actual */
+.iconos .fa-instagram:hover { color: #E4405F !important; }
+.iconos .fa-whatsapp:hover  { color: #25D366 !important; }
+.iconos .fa-square-facebook:hover { color: #4267B2 !important; }

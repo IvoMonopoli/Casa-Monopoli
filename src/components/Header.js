@@ -1,24 +1,42 @@
+// src/components/Header.js
 import React from 'react';
-import logo from '../assets/logardo.jpg'; // Actualiza la ruta de la imagen
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import '../styles/styles.css';
-
+import logo from '../assets/logardo.png';
+import '../styles/Header.css';
 
 const Header = () => {
   return (
-    <header className="header">
-      <div className="logo">
-        <img src={logo} alt="Logo de la marca" />
-      </div>
-      <nav className="navfront">
-        <ul className="nav-links">
-          <li><Link to="/">Inicio</Link></li>
-          <li><Link to="/Servicios">Servicios</Link></li>
-          <li><Link to="/QuienSomos">Quiénes somos</Link></li>
-          <li><Link to="/Ayuda">Ayuda</Link></li>
-        </ul>
-      </nav>
-    </header>
+    <Navbar
+      expand="lg"
+      sticky="top"
+      className="header-navbar shadow-sm"
+    >
+      {/* Usa container-fluid para que el logo llegue al borde */}
+      <Container fluid>
+        <Navbar.Brand
+          as={Link}
+          to="/"
+          className="header-logo d-flex align-items-center"
+        >
+          <img
+            src={logo}
+            alt="Logo de la marca"
+            className="d-inline-block align-top"
+          />
+          
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbar-nav" />
+        <Navbar.Collapse id="navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link as={Link} to="/">Inicio</Nav.Link>
+            <Nav.Link as={Link} to="/Servicios">Servicios</Nav.Link>
+            <Nav.Link as={Link} to="/QuienSomos">Quiénes somos</Nav.Link>
+            <Nav.Link as={Link} to="/Ayuda">Ayuda</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 

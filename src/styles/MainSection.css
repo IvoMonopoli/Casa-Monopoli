@@ -1,0 +1,92 @@
+/* src/components/MainSection.css */
+/* ================================
+   Estilos para MainSection (galería de imágenes)
+   ================================ */
+
+.images-wrapper {
+  overflow: hidden;
+}
+
+.section-images {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 4px;
+}
+
+/* Contenedores e imágenes */
+.image-container {
+  flex: 1;
+  text-align: center;
+  background-color: #74c062;
+  padding: 20px 10px;
+}
+.image-container img {
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+  display: block;
+  margin: 50px auto 0;
+}
+.image-container p {
+  margin: 50px auto 70px;
+  font-size: 30px;
+  color: white;
+  max-width: 80%;
+  font-style: italic;
+}
+
+/* Variantes de tamaño si las necesitas */
+.image-container.enlarged { /* primera tarjeta */
+  flex: 1.1;
+}
+.image-container.medio {    /* segunda tarjeta */
+  flex: 1.1;
+}
+
+/* ===== Responsividad ===== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 992px) {
+  .section-images {
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0px;
+    margin: 0px;
+  }
+  .image-container {
+    padding: 20px;
+  }
+  .image-container img {
+    max-width: 150px;
+    margin-top: 20px;
+  }
+  .image-container p {
+    font-size: 18px;
+    margin: 20px auto 30px;
+    max-width: 90%;
+  }
+}
+
+
+/* Móviles (smartphones) */
+@media (max-width: 767.9px) {
+  .section-images {
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0px;
+    margin: 0px;
+  }
+  .image-container {
+    padding: 20px;
+  }
+  .image-container img {
+    max-width: 150px;
+    margin-top: 20px;
+  }
+  .image-container p {
+    font-size: 18px;
+    margin: 20px auto 30px;
+    max-width: 90%;
+  }
+}

@@ -7,7 +7,7 @@ const Cards = () => {
         id: 1,
         title: "Aspirador",
         description: "Aspirador para secreciones.",
-        image: require("../assets/cards/aspirador.jpg"),
+        image: require("../assets/cards/aspirador.png"),
       },
       {
         id: 2,

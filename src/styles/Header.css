@@ -1,0 +1,84 @@
+/* src/components/Header.css */
+/* ================================
+   Estilos para <Navbar className="header-navbar">
+   ================================ */
+/* Navbar principal */
+.header-navbar {
+    background-color: #74c062;
+    font-size: 20px;
+    padding: 0;
+}
+
+/* Quita el padding lateral para que el logo toque el borde */
+.header-navbar .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* ================================
+   Logo (Navbar.Brand con className="header-logo")
+   ================================ */
+.header-logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.header-logo img {
+  width: 100px;
+  margin: -15px 25px;
+
+  /* si quieres mantener proporción, puedes usar height en su lugar */
+  /* height: 85px; */
+}
+
+/* ================================
+   Navegación (Nav + Nav.Link)
+   ================================ */
+/* Empuja los links a la derecha */
+.header-navbar .navbar-nav {
+  margin-right: 70px;
+}
+
+/* Aplica padding y estilo a cada link */
+.header-navbar .nav-link {
+  color: white !important;
+  text-decoration: none;
+  padding: 15px 50px 20px 0 !important;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover de cada link */
+.header-navbar .nav-link:hover {
+  color: white !important;
+  transform: scale(1.1);
+}
+.header-navbar .navbar-toggler {
+  /* aumenta este valor para moverlo más a la izquierda */
+  margin-right: 2rem;  /* antes 1rem → ahora 2rem */
+}
+/* Sólo en pantallas menores a 992px (lg) */
+@media (max-width: 992px) {
+  /* Reduce o elimina el scale en hover/click */
+  .header-navbar .nav-link {
+    /* Padding más cómodo para tap */
+    padding: 12px 20px !important;
+    /* Quita transform al hacer clic o hover */
+    transition: none !important;
+  }
+  .header-navbar .nav-link:hover,
+  .header-navbar .nav-link:active {
+    transform: none !important;
+    color: #000 !important;
+  }
+
+  /* Desplaza todo el menú colapsado un poco hacia la derecha */
+  .header-navbar .navbar-collapse {
+    padding-left: 1rem;
+  }
+  /* Alternativamente empuja solo la lista */
+  .header-navbar .navbar-nav {
+    margin-left: 1rem;
+  }
+}

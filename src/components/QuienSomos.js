@@ -7,6 +7,7 @@ import foto3 from "../assets/negocio3.jpg";
 const QuienesSomos = () => {
     return (
         <div className="quienes-somos">
+            <h1 className="titulo">Quienes somos</h1>
             <div className="fotos-contenedor">
                 <img src={foto1} alt="Foto 1" className="foto" />
                 <img src={foto2} alt="Foto 2" className="foto" />

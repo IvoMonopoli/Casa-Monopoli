@@ -1,56 +1,105 @@
+/* src/components/DetalleProducto.css */
 .detalle-producto {
   display: flex;
-  flex-direction: column; /* Coloca los elementos en una columna */
-  align-items: center; /* Centra el contenido horizontalmente */
-  justify-content: center; /* Centra el contenido verticalmente */
-  margin: 0 auto; /* Centra horizontalmente */
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
   padding: 20px;
-  background-color: transparent;
   max-width: 1200px;
   width: 100%;
-  height: 80vh; /* Ocupa toda la altura de la ventana */
+  /* deja que la altura crezca según contenido */
+  height: auto;
+  background-color: transparent;
 }
 
-  
-  .detalle-contenedor {
-    display: flex; /* Mantiene la disposición en fila */
-    justify-content: space-between; /* Asegura espacio entre los elementos */
-    align-items: center; /* Alinea verticalmente en el centro */
-    width: 100%; /* Mantén el ancho completo */
-}
-  
-.detalle-imagen-caja {
-  flex: 1; /* Ocupa la mitad del ancho */
+/* Contenedor principal: dos columnas en desktop, una en móvil */
+.detalle-contenedor {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  margin-right: 20px; /* Espaciado con la descripción */
-  padding-right: 80px;
-  border-right: 3px solid green; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;         /* centra verticalmente */
+  width: 100%;
+  gap: 20px;
 }
-  
-  .detalle-imagen {
-    width: 450px; /* Ancho fijo para todas las imágenes */
-    height: 400px; /* Alto fijo para todas las imágenes */
-    object-fit: cover; /* Mantiene la proporción y recorta el exceso si es necesario */
-    border-radius: 10px; /* Opcional: esquinas redondeadas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Opcional: sombra alrededor de la imagen */
+
+/* Caja de la imagen */
+.detalle-imagen-caja {
+  flex: 1 1 400px;            /* crece/reduce con base 400px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* en desktop lleva border, en móvil se quita más abajo */
+  border-right: 3px solid green;
+  padding-right: 20px;
+  margin: 0;
+}
+
+/* Imagen dentro de la caja */
+.detalle-imagen {
+  width: 100%;                /* siempre al 100% del padre */
+  max-width: 450px;           /* opcional: no crece más allá de 450px */
+  height: auto;               /* mantiene proporción */
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Caja de descripción */
+.detalle-descripcion-caja {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;      /* columna para alinear el p bajo sí mismo */
+  justify-content: center;     /* centra vertical dentro de la caja */
+  align-items: center;         /* centra horizontal */
+  text-align: center;          /* centra el texto */
+  padding: 0 20px;
+  margin: 0;
+}
+
+/* Texto */
+.detalle-descripcion {
+  width: 100%;
+  max-width: 600px;            /* opcional: para no alargarlo demasiado */
+  margin: 0 auto;              /* centrar si queda más ancho */
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: black;
+  text-align: center;          /* refuerzo de centrado */
+}
+
+/* Media Queries para tablet y móvil */
+@media (max-width: 992px) {
+  .detalle-contenedor {
+    gap: 15px;
   }
-  
-  
+  .detalle-imagen-caja,
   .detalle-descripcion-caja {
-    flex: 1; /* Ocupa la otra mitad del ancho */
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    padding: 20px;
-    margin-left: 20px; /* Espaciado con la imagen */
-    text-align: center; /* Alinea el texto al centro dentro de su caja */
-}
-  
-  .detalle-descripcion {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: black;
+    flex: 1 1 100%;           /* ocupan 100% ancho */
+    padding: 0;
+    border-right: none;
   }
-  
+  .detalle-imagen-caja {
+    padding-bottom: 15px;     /* espaciado abajo de la imagen */
+  }
+  .detalle-imagen {
+    max-width: 350px;         /* ajusta tamaño en tablet */
+  }
+  .detalle-descripcion {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .detalle-contenedor {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .detalle-imagen {
+    max-width: 100%;          /* ancho completo en móvil */
+  }
+  .detalle-descripcion {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}

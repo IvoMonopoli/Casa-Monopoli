@@ -11,10 +11,10 @@
   .card {
     width: 300px;
     border-radius: 15px;
+    border-color: #74c062 !important;
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s ease;
-    background-color: #74c062; /* Default */
     margin: 15px 15px;
     display: flex;
     flex-direction: column; /* Organiza el contenido en columna */
@@ -53,7 +53,7 @@
   /* Botón Ver Más */
   .view-more-btn {
     padding: 10px 20px;
-    background-color: green;
+    background-color: #74c062;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -63,6 +63,6 @@
   }
   
   .view-more-btn:hover {
-    background-color: #0056b3;
+    background-color: green;
   }
   

@@ -23,10 +23,37 @@
 }
 
 .descripcion {
-    font-size: 1.2rem;
-    line-height: 1.5;
+    font-size: 1.6rem;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.8;
     color:black;
     text-align: center; /* Centra el texto */
     max-width: 800px; /* Limita el ancho para una mejor lectura */
     margin-top: 100px;
 }
+.titulo{
+    color: green;
+    margin-top: 35px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Responsive: tablet y móvil */
+@media (max-width: 992px) {
+  .fotos-contenedor {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .foto {
+    width: 100%;        /* ocupa todo el ancho del contenedor */
+    max-width: 350px;   /* si quieres tope */
+    height: 250px;      /* alto fijo para todas */
+    object-fit: cover;  /* recorta lo que sobre */
+    margin: 0 auto;     /* centra horizontal */
+  }
+}
+
+  .descripcion {
+    margin-top: 40px;        /* reduce el espacio superior en móvil */
+  }
+

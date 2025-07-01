@@ -9,6 +9,8 @@ import QuienesSomos from './components/QuienSomos';
 import Ayuda from './components/Ayuda';
 import DetalleProducto from './components/DetalleProducto'; // Ruta para los detalles del producto
 import './styles/styles.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // Creamos un componente contenedor para la página principal
 const Home = () => {

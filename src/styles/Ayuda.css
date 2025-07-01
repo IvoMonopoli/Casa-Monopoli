@@ -3,20 +3,23 @@
     margin: auto; /* Centramos horizontalmente */
     text-align: center; /* Centramos el contenido */
     padding: 40px; /* Espaciado para mejor visualización */
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .ayuda h2 {
     font-size: 3rem; /* Agrandamos el título */
-    margin-bottom: 20px;
+    margin: 80px 0px;
     font-weight: bold;
     color: green;
-    font-family: "Homer Simpson UI"
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .ayuda-item {
     border-bottom: 2px solid green; /* Línea más visible entre secciones */
     padding: 15px;
-    font-family: "Homer Simpson UI"
+        font-size: 1.6rem;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.8;
 
 }
 
@@ -25,7 +28,7 @@
     background: none;
     border: none;
     font-size: 2.5rem; /* Agrandamos los títulos */
-    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
     cursor: pointer;
     text-align: center;
     padding: 15px;
@@ -41,7 +44,7 @@
 .ayuda-preguntas {
     text-align: center;
     padding: 10px;
-    font-family: "Homer Simpson UI"
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .ayuda-pregunta {
@@ -49,12 +52,12 @@
     font-size: 2rem; /* Agrandamos las preguntas */
     color: green;
     font-weight: bold;
-    font-family: "Homer Simpson UI"
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .ayuda-pregunta p {
     font-size: 1.3rem; /* Agrandamos las respuestas */
     color: black;
-    font-family: "Homer Simpson UI";
+    font-family: 'Times New Roman', Times, serif;
     margin-bottom: 50px;
 }
